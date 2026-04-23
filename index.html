@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteBees AI - Smart Beehive Intelligence</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <span class="pulse"></span> 
+                <h1>ByteBees AI</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="domain.html">Domain</a></li>
+                <li><a href="milestones.html">Milestones</a></li>
+                <li><a href="documents.html">Documents</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="honeycomb"></div>
+        <div class="bee-fly">🐝</div>
+        
+        <div class="hero-content">
+            <div class="badge">Next-Gen IoT Solution</div>
+            <h2>Smart Beehive <br><span class="highlight">Intelligence System</span></h2>
+            <p>
+                An AI-driven IoT platform engineered to monitor, protect, 
+                and optimize honey production ecosystems in Sri Lanka.
+            </p>
+            <div class="hero-btns">
+                <a href="domain.html" class="button">Explore Research</a>
+                <a href="#overview" class="button secondary">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="section-header">
+            <h3>Why ByteBees AI?</h3>
+            <p>Integrating embedded AI with real-time environmental sensing.</p>
+        </div>
+
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-icon">📈</div>
+                <h4>Predictive Analytics</h4>
+                <p>Machine learning models forecast honey readiness and reduce fermentation risks through intelligent monitoring.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🛡️</div>
+                <h4>Hornet Detection</h4>
+                <p>AI-powered audio-visual detection identifies hornet activity in real-time to prevent sudden colony loss.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🌍</div>
+                <h4>Rural Deployment</h4>
+                <p>Designed for low-cost, high-durability deployment in rural Sri Lankan environments.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🌡️</div>
+                <h4>IoT Monitoring</h4>
+                <p>Real-time sensing of temperature, humidity, and hive acoustics to optimize colony health.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="section">
+    <div class="section-header">
+        <h3>Project Evolution</h3>
+        <p>From identified challenges to a localized Sri Lankan solution.</p>
+    </div>
+
+    <div class="journey-container">
+        <div class="journey-item reveal">
+            <div class="journey-number">01</div>
+            <div class="glass-card glow-left">
+                <h4>Addressing Beekeeping Challenges</h4>
+                <p>Traditional beekeeping faces colony loss due to poor monitoring and inefficient harvest timing. ByteBees AI solves this by integrating IoT sensing and embedded AI.</p>
+            </div>
+        </div>
+
+        <div class="journey-item reveal reverse">
+            <div class="journey-number">02</div>
+            <div class="glass-card glow-right">
+                <h4>System Design & Features</h4>
+                <p>The system combines multiple environmental sensors with ML algorithms to provide real-time decision support for beekeepers.</p>
+            </div>
+        </div>
+
+        <div class="journey-item reveal">
+            <div class="journey-number">03</div>
+            <div class="glass-card glow-left">
+                <h4>Designed for Sri Lanka</h4>
+                <p>The platform is specifically designed for local conditions—low-cost, scalable, and ideal for deployment in rural environments.</p>
+            </div>
+        </div>
+        
+        <div class="nectar-path"></div>
+    </div>
+</section>
+
+    <footer>
+        <div class="footer-container">
+            <p>© 2026 ByteBees AI | Final Year Research Project | Sri Lanka</p>
+            <div class="footer-links">
+                <a href="https://github.com/Nawoda529" target="_blank">GitHub</a>
+                <a href="mailto:nmsanduni@gmail.com">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Mouse Follower (Pollen Particles)
+        document.addEventListener("mousemove", function(e) {
+            if (Math.random() > 0.1) return; // Reduce frequency for performance
+            let bee = document.createElement("div");
+            bee.innerHTML = "✨";
+            bee.style.position = "fixed";
+            bee.style.left = e.clientX + "px";
+            bee.style.top = e.clientY + "px";
+            bee.style.fontSize = "10px";
+            bee.style.pointerEvents = "none";
+            bee.style.zIndex = "9999";
+            bee.style.color = "#f4b400";
+            document.body.appendChild(bee);
+
+            setTimeout(() => {
+                bee.style.transition = "all 0.8s ease";
+                bee.style.transform = `translate(${(Math.random()-0.5)*50}px, 30px)`;
+                bee.style.opacity = "0";
+            }, 10);
+            setTimeout(() => bee.remove(), 800);
+        });
+
+        // 2. Scroll Reveal Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section, .card, .glass-card').forEach(el => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
